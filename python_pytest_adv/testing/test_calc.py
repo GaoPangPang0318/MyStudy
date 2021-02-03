@@ -19,7 +19,7 @@ class TestCalc(Base):
     @pytest.mark.parametrize("a,b,expect",Base.get_datas("add")["datas"],ids=Base.get_datas("add")["ids"])
     def test_add(self,a,b,expect):
         result=self.calc.add(a,b)
-        #
+        #对浮点数进行小数点后两位保留
         if isinstance(result, float):
             result = round(result, 2)
         assert  result==expect
