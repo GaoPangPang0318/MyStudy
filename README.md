@@ -4,3 +4,4 @@
 2.python_oop_homework：python脚本编写实战课后作业  
 3.python_pytest：python pyetst测试实战课后作业  
 4.python_pytest_adv：python pytest测试进阶课后作业  
+5.python_selenium:python selenium 企业微信web端自动化登录课后作业  
