@@ -44,7 +44,7 @@ class TestWechat:
         #元素定位1：定位企业微信“导入通讯录”
         self.driver.find_element_by_xpath('//*[@id="_hmt_click"]/div[1]/div[4]/div[2]/a[2]/div/span[2]').click()
         #元素定位2：定位企业微信“上传文件”
-        self.driver.find_element_by_id('js_upload_file_input').send_keys("C:/Users/Gao/Desktop/testdata.xlsx")
+        self.driver.find_element_by_id('js_upload_file_input').send_keys("./testdata.xlsx")
         #获取上传文件的文件名并进行断言
         file_name=self.driver.find_element_by_id('upload_file_name').text
         assert "testdata.xlsx"==file_name
