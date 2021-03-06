@@ -66,7 +66,7 @@ class AddMembersPage(BasePage):
         :return:
         '''
         WebDriverWait(self.driver,10).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, ".member_colRight_memberTable_th_Checkbox")))
-        eles_list = self.driver.find_elements(By.CSS_SELECTOR, "                                               ")
+        eles_list = self.driver.find_elements(By.CSS_SELECTOR, ".member_colRight_memberTable_td:nth-child(2)")
         names = []
         for ele in eles_list:
             names.append(ele.get_attribute("title"))
