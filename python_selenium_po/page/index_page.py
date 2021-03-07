@@ -2,13 +2,11 @@
 企业微信首页PO
 """
 from selenium.webdriver.common.by import By
-
 from python_selenium_po.page.addmembers_page import AddMembersPage
 from python_selenium_po.page.base_page import BasePage
 
 
 class IndexPage(BasePage):
-
     base_url = "https://work.weixin.qq.com/wework_admin/frame#index"
 
     def goto_addmembers(self):

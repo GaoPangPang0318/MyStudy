@@ -6,12 +6,10 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.remote.webdriver import WebDriver
 
 class BasePage:
-
-    base_url=""
-
-    def __init__(self,driver:WebDriver=None):
+    base_url = ""
+    def __init__(self, driver: WebDriver = None):
         if driver == None:
-            # 复用浏览器，需要设置 option.debugger_address
+            # 复用浏览器
             option = Options()
             option.debugger_address = "127.0.0.1:9222"
             self.driver = webdriver.Chrome(options=option)
@@ -30,15 +28,15 @@ class BasePage:
         """
         self.driver.quit()
 
-    def find_click(self,loactor,value):
+    def find_click(self, loactor, value):
         """
         定位元素并点击
         :param loactor: 定位方法
         :param value: 定位值
         """
-        self.driver.find_element(loactor,value).click()
+        self.driver.find_element(loactor, value).click()
 
-    def find_sendkeys(self,loactor,value,key):
+    def find_sendkeys(self, loactor, value, key):
         """
         定位元素并传值
         :param loactor: 定位方法
@@ -46,5 +44,3 @@ class BasePage:
         :param key: sendkeys的值
         """
         self.driver.find_element(loactor, value).send_keys(key)
-
-
