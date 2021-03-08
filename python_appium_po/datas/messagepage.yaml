@@ -1,0 +1,2 @@
+- action: find_click
+  locator: (xpath,'//*[@text="通讯录"]')

@@ -1,0 +1,2 @@
+- action: find_click
+  locator: (Xpath,'//*[@text='添加成员']')
