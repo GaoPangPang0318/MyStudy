@@ -37,6 +37,15 @@ class BasePage:
         """
         self.find(by, locator).send_keys(key)
 
+    def get_toast(self,by,locator):
+        """
+        获取toast
+        :param by: 定位方法
+        :param locator: 定位值
+        :return: toast的文本信息
+        """
+        return self.find(by,locator).text
+
     def steps(self, path):
         """
         步骤数据加载
@@ -53,3 +62,6 @@ class BasePage:
                 for key in self._key:
                     content=content.replace("{%s}"%key,self._key[key])
                 self.find_sendkeys(step["by"], step["locator"], content)
+            elif step["action"]=="get_toast":
+                #返回获取的toast文本信息
+                return self.get_toast(step["by"],step["locator"])
