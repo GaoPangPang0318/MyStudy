@@ -2,7 +2,6 @@
 基类
 """
 import yaml
-from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.webdriver import WebDriver
 
 
@@ -12,30 +11,24 @@ class BasePage:
 
         # 定义find函数，用于定位元素，并返回找到的元素
 
-    def find(self,locator:dict):
+    def find(self,by,locator):
         """
         查找元素
-        :param locator:Dict (by,locator)=(BY.XPath,XXX)
-        :return:
         """
-        return self.driver.find_element(*locator)
+        return self.driver.find_element(by,locator)
 
-    def find_click(self,locator:dict):
+    def find_click(self,by,locator):
         """
         查找元素并点击
-        :param locator:locator:Dict (by,locator)=(BY.XPath,XXX)
-        :return:
-        """
-        self.find(locator).click()
 
-    def find_senkeys(self,locator:dict,key):
+        """
+        self.find(by,locator).click()
+
+    def find_sendkeys(self,by,locator,key):
         """
         查找元素并传值
-        :param locator:locator:Dict (by,locator)=(BY.XPath,XXX)
-        :param key:传送值
-        :return:
         """
-        self.find(locator).send_keys(key)
+        self.find(by,locator).send_keys(key)
 
     def steps(self, path):
         """
@@ -47,7 +40,7 @@ class BasePage:
             steps = yaml.safe_load(f)
         for step in steps:
             if step["action"]=="find_click":
-                self.find_click(step["locator"])
+                self.find_click(step["by"],step["locator"])
             #测试数据如何传递？？想要单独用一个文件
             elif step["action"]=="find_sendkeys":
-                self.find_senkeys(step["locator"],step["value"])
+                self.find_sendkeys(step["by"],step["locator"],step["value"])

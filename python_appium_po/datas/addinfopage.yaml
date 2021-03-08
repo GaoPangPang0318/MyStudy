@@ -1,2 +1,27 @@
-- action: xxx
-  locator: (Xpath,XXX)
+- action: find_sendkeys
+  by: xpath
+  locator: '//*[@text="必填"]'
+  value: '测试001'
+
+- action: find_sendkeys
+  by: xpath
+  locator: '//*[@text="帐号　"]/..//*[@resource-id="com.tencent.wework:id/b7m"]'
+  value: 'test001'
+
+- action: find_sendkeys
+  by: xpath
+  locator: '//*[@text="手机号"]'
+  value: '18300000000'
+
+- action: find_sendkeys
+  by: xpath
+  locator: '//*[@text="邮箱　"]/..//*[@resource-id="com.tencent.wework:id/b7m"]'
+  value: 'test001@qq.com'
+
+- action: find_click
+  by: xpath
+  locator: '//*[@text="保存"]'
+
+
+
+
