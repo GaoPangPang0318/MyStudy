@@ -6,6 +6,9 @@ from appium.webdriver.webdriver import WebDriver
 
 
 class BasePage:
+    #私有变量，存放sendkeys中的值
+    _key = {}
+
     def __init__(self, driver: WebDriver):
         self.driver = driver
 
@@ -45,4 +48,8 @@ class BasePage:
             if step["action"] == "find_click":
                 self.find_click(step["by"], step["locator"])
             elif step["action"] == "find_sendkeys":
-                self.find_sendkeys(step["by"], step["locator"], step["value"])
+                #分离测试数据，测试数据单独一个yaml文件
+                content:str=step["value"]
+                for key in self._key:
+                    content=content.replace("{%s}"%key,self._key[key])
+                self.find_sendkeys(step["by"], step["locator"], content)

@@ -3,7 +3,6 @@ APP启动设置
 """
 
 from appium import webdriver
-
 from python_appium_po.pages.message_page import MessagePage
 
 
