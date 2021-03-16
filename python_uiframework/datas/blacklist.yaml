@@ -1,0 +1,5 @@
+blacklist:
+  - id
+    'com.tencent.wework:id/ig0'
+maxnumber:
+  - 3

@@ -1,0 +1,4 @@
+go_to_editmemberinfo:
+  - action: find_click
+    by: xpath
+    locator: '//*[@text="编辑成员"]'

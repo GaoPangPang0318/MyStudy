@@ -1,0 +1,32 @@
+Tue, 16 Mar 2021 17:47:34 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text='日程']
+Tue, 16 Mar 2021 17:47:35 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text='日程']
+Tue, 16 Mar 2021 17:47:35 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text='通讯录']
+Tue, 16 Mar 2021 17:47:46 base_page.py[line:55] INFO Can not find the element。
+Tue, 16 Mar 2021 17:47:46 base_page.py[line:74] INFO  Deal with blackList:('id', 'com.tencent.wework:id/ig0')
+Tue, 16 Mar 2021 17:47:46 base_page.py[line:82] INFO  Success! blackList:('id', 'com.tencent.wework:id/ig0')
+Tue, 16 Mar 2021 17:47:46 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text='通讯录']
+Tue, 16 Mar 2021 17:47:47 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text='通讯录']
+Tue, 16 Mar 2021 17:47:51 base_page.py[line:43] INFO start find: by=id , locator = com.tencent.wework:id/iga
+Tue, 16 Mar 2021 17:47:55 base_page.py[line:50] INFO  Success！find: by=id , locator = com.tencent.wework:id/iga
+Tue, 16 Mar 2021 17:47:55 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text="编辑成员"]
+Tue, 16 Mar 2021 17:47:56 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text="编辑成员"]
+Tue, 16 Mar 2021 17:47:56 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text="删除成员"]
+Tue, 16 Mar 2021 17:47:57 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text="删除成员"]
+Tue, 16 Mar 2021 17:47:57 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text="确定"]
+Tue, 16 Mar 2021 17:47:58 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text="确定"]
+Tue, 16 Mar 2021 17:49:41 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text='日程']
+Tue, 16 Mar 2021 17:49:43 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text='日程']
+Tue, 16 Mar 2021 17:49:43 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text='通讯录']
+Tue, 16 Mar 2021 17:49:53 base_page.py[line:55] INFO Can not find the element。
+Tue, 16 Mar 2021 17:49:54 base_page.py[line:74] INFO  Deal with blackList:('id', 'com.tencent.wework:id/ig0')
+Tue, 16 Mar 2021 17:49:54 base_page.py[line:82] INFO  Success! blackList:('id', 'com.tencent.wework:id/ig0')
+Tue, 16 Mar 2021 17:49:54 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text='通讯录']
+Tue, 16 Mar 2021 17:49:54 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text='通讯录']
+Tue, 16 Mar 2021 17:49:57 base_page.py[line:43] INFO start find: by=id , locator = com.tencent.wework:id/iga
+Tue, 16 Mar 2021 17:50:01 base_page.py[line:50] INFO  Success！find: by=id , locator = com.tencent.wework:id/iga
+Tue, 16 Mar 2021 17:50:01 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text="编辑成员"]
+Tue, 16 Mar 2021 17:50:02 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text="编辑成员"]
+Tue, 16 Mar 2021 17:50:02 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text="删除成员"]
+Tue, 16 Mar 2021 17:50:04 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text="删除成员"]
+Tue, 16 Mar 2021 17:50:04 base_page.py[line:43] INFO start find: by=xpath , locator = //*[@text="确定"]
+Tue, 16 Mar 2021 17:50:05 base_page.py[line:50] INFO  Success！find: by=xpath , locator = //*[@text="确定"]
