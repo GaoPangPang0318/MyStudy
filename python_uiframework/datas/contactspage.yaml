@@ -1,0 +1,3 @@
+go_to_memberinfo:
+  - action: swip_click
+    text: ${delname}

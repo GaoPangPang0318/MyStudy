@@ -1,0 +1,4 @@
+go_to_memberinfospecial:
+  - action: find_click
+    by: id
+    locator: 'com.tencent.wework:id/iga'
