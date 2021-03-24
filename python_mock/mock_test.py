@@ -20,7 +20,6 @@ class Counter:
         请求下发需要的操作
         """
         self.num = self.num + 1
-
         # 日志输出至终端显示
         ctx.log.info("We've seen %d flows" % self.num)
 
@@ -28,20 +27,16 @@ class Counter:
         """
         响应时需要的操作
         """
-
         # 判断是否存在我们想要的请求内容，存在的话就进行我们要向进行的操作
         if "https://stock.xueqiu.com/v5/stock/batch/quote.json?_t=" in flow.request.pretty_url:
             # 修改响应的原始数据
-
             # 获取响应数据的text，由于获取的text是str类型，所以需要对数据进行转换操作，转换成json类型
             data = json.loads(flow.response.text)
-
             # 参照我们抓取的响应数据进行修改
             # 使用jsonpath进行替换会更加简单方便
             data["data"]["items"][1]["quote"]["name"] = "隆基股份隆基股份"
             data["data"]["items"][2]["quote"]["name"] = " "
-
-            # 再把data数据从Jason格式转换成原来的格式，并赋值给响应信息
+            # 把data数据从Jason格式转换成原来的格式，并赋值给响应信息
             flow.response.text = json.dumps(data)
 
 
