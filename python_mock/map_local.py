@@ -19,7 +19,7 @@ class Counter:
         if "https://stock.xueqiu.com/v5/stock/batch/quote.json?_t=" in flow.request.pretty_url:
 
         # 读取文件数据，作为响应返回
-            with open("quote.json", encoding="utf-8") as f:
+            with open("quote_xueqiustock.json", encoding="utf-8") as f:
                 data = json.load(f)
             flow.response.text = json.dumps(data)
 

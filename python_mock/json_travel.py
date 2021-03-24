@@ -6,8 +6,6 @@
 # @Email        : 719453296@qq.com
 # -*- -*- -*- -*- -*- -*- -*- -*- -*-
 import json
-import sys
-
 from mitmproxy import http
 from mitmproxy import ctx
 
@@ -25,39 +23,29 @@ class Counter:
                 in flow.request.pretty_url:
         # 打开文件，读取文件数据，作为响应，给返回
             data = json.loads(flow.response.text)
-            flow.response.text = json.dumps(self.json_travel(data))
+            flow.response.text = json.dumps(self.modify_json(data))
+
+    def modify_json(self,data):
+        if isinstance(data,dict):
+            for k,v in data.items():
+                if k=="items":
 
 
-    def json_travel(self, data):
-        """
-        遍历响应数据，对不同类型的数据进行批量操作
-        :param data: json格式数据
-        :return: json格式数据
-        """
-        # 判断传入的数据类型{"a": {"b":{"c":1}}}
-        if isinstance(data, dict):
-            # 遍历字典的数据
-            # 当字典格式，递归value值
-            for key, value in data.items():
-                data[key] = self.json_travel(value)
-
-        elif isinstance(data, list):
-            # 当数据类型 为 list 的时候， 添加到结构内，并继续递归遍历，
-            # 当数据类型不为可迭代对象时停止遍历
-            data = [self.json_travel(value) for value in data]
-
-        #对不同的数据类型进行不同的操作
-        elif isinstance(data, bool):
-            data = data
-        elif isinstance(data, int) or isinstance(data, float):
-            data = data * 2
-        elif isinstance(data, str):
-            data = data
-        else:
-            data = data
-        return data
 
 addons = [
     Counter()
 ]
+
+# if __name__ == '__main__':
+    # """
+    # json.loads 和json.load的区别：
+    #     json.loads()参数是字符串。
+    #     json.load()参数是文件对象。
+    # """
+    # data=json.load(open("quote_xueqiustock.json",encoding='utf-8'))
+    # new_data=Counter().json_travel(data)
+    # with open("new.json","w",encoding="utf-8") as f:
+    #     json.dump(new_data,fp=f,indent=2)
+
+
 
