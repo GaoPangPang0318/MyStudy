@@ -1,7 +1,7 @@
 # -*- -*- coding: utf-8 -*-  -*-  -*-
 # @Author       : Gaopangpang
 # @Project Name : MyStudy
-# @File         : json_travel
+# @File         : __init__.py
 # @Time         : 2021/3/23 22:21
 # @Email        : 719453296@qq.com
 # -*- -*- -*- -*- -*- -*- -*- -*- -*-
