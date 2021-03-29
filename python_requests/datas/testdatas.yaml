@@ -8,11 +8,7 @@ createmember:
   - ['wanger','王二','18320202023',[1,3],{'gender':2,'position':'研发经理'}]
 getmember:
   - ['lisi',0]
-  - ['',60111]
-  - ['xxx',60111]
 updatemember:
   - ['zhangsan',{'name':'张三','alias':'小三'}]
 deletemember:
   - ['lisi',0]
-  - ['',60111]
-  - ['xxx',60111]

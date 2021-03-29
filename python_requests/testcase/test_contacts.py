@@ -43,19 +43,19 @@ class TestContacts(TestCaseBase):
         assert r['errmsg'] == 'created'
         assert delete_result['errcode']==0
 
-    # @pytest.mark.parametrize("userid,result", TestCaseBase.get_testdata('getmember'))
-    # def test_getmember(self, userid, result: int):
-    #     """
-    #     获取用户信息测试用例
-    #     :param userid:
-    #     :param result: 预期返回错误码
-    #     """
-    #     self.contacts.create_member('lisi','李四','18320202022',[1,2])
-    #     try:
-    #         r = self.contacts.get_member(userid=userid)
-    #     finally:
-    #         self.contacts.delete_member(userid)
-    #     assert r['errcode'] == result
+    @pytest.mark.parametrize("userid,result", TestCaseBase.get_testdata('getmember'))
+    def test_getmember(self, userid, result: int):
+        """
+        获取用户信息测试用例
+        :param userid:
+        :param result: 预期返回错误码
+        """
+        self.contacts.create_member('lisi','李四','18320202022',[1,2])
+        try:
+            r = self.contacts.get_member(userid=userid)
+        finally:
+            self.contacts.delete_member(userid)
+        assert r['errcode'] == result
 
 
     @pytest.mark.parametrize("userid,changeinfo", TestCaseBase.get_testdata('updatemember'))
@@ -82,4 +82,4 @@ class TestContacts(TestCaseBase):
         self.contacts.create_member('lisi', '李四', '18320202022', [1, 2])
         r = self.contacts.delete_member(userid=userid)
         assert r['errcode'] == result
-#
+
